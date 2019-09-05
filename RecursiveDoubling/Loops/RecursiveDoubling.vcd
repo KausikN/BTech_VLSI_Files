@@ -1,0 +1,30 @@
+$date
+	Tue Aug  6 19:49:41 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top $end
+$var wire 4 ! out [4:1] $end
+$var reg 4 " in [4:1] $end
+$scope module RD $end
+$var wire 4 # pgk_old [4:1] $end
+$var reg 4 $ i [4:1] $end
+$var reg 4 % j [4:1] $end
+$var reg 4 & pgk_new [4:1] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1100 &
+b101 %
+b1000 $
+bx1x0 #
+bx1x0 "
+b1100 !
+$end
+#10

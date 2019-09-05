@@ -1,0 +1,196 @@
+$date
+	Tue Aug 20 21:50:39 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module USR_tb $end
+$var wire 4 ! q [4:1] $end
+$var reg 1 " clk $end
+$var reg 4 # inp [4:1] $end
+$var reg 1 $ reset $end
+$var reg 2 % select [2:1] $end
+$scope module srPIPO $end
+$var wire 1 " clk $end
+$var wire 4 & inputs [4:1] $end
+$var wire 1 $ reset $end
+$var wire 2 ' select [2:1] $end
+$var wire 4 ( w [4:1] $end
+$var wire 4 ) outputs [4:1] $end
+$scope module dff_1 $end
+$var wire 1 " clk $end
+$var wire 1 * d $end
+$var wire 1 $ reset $end
+$var reg 1 + q $end
+$upscope $end
+$scope module dff_2 $end
+$var wire 1 " clk $end
+$var wire 1 , d $end
+$var wire 1 $ reset $end
+$var reg 1 - q $end
+$upscope $end
+$scope module dff_3 $end
+$var wire 1 " clk $end
+$var wire 1 . d $end
+$var wire 1 $ reset $end
+$var reg 1 / q $end
+$upscope $end
+$scope module dff_4 $end
+$var wire 1 " clk $end
+$var wire 1 0 d $end
+$var wire 1 $ reset $end
+$var reg 1 1 q $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+x1
+10
+x/
+0.
+x-
+1,
+x+
+1*
+bx )
+b1011 (
+b11 '
+b1011 &
+b11 %
+0$
+b1011 #
+0"
+bx !
+$end
+#5
+1"
+#10
+11
+0/
+1-
+b1011 !
+b1011 )
+1+
+0.
+1*
+1,
+10
+b1011 (
+0"
+b1111 #
+b1111 &
+b0 %
+b0 '
+#15
+1"
+#20
+1.
+b1111 (
+0"
+b11 %
+b11 '
+#25
+1"
+#30
+b1111 !
+b1111 )
+1/
+0*
+1,
+1.
+10
+b1110 (
+0"
+b1 #
+b1 &
+b1 %
+b1 '
+#35
+1"
+#40
+0,
+b1100 (
+b1110 !
+b1110 )
+0+
+0"
+b1010 #
+b1010 &
+#45
+1"
+#50
+0.
+b1000 (
+b1100 !
+b1100 )
+0-
+0"
+b10 #
+b10 &
+#55
+1"
+#60
+b1000 !
+b1000 )
+0/
+0,
+1.
+00
+b100 (
+0"
+b110 #
+b110 &
+b10 %
+b10 '
+#65
+1"
+#70
+0.
+1,
+b10 (
+01
+b100 !
+b100 )
+1/
+0"
+b1 #
+b1 &
+#75
+1"
+#80
+1-
+b10 !
+b10 )
+0/
+10
+b1010 (
+0"
+b1010 #
+b1010 &
+b11 %
+b11 '
+#85
+1"
+#90
+b1010 !
+b1010 )
+11
+1,
+10
+b1010 (
+0"
+b0 #
+b0 &
+b0 %
+b0 '
+#95
+1"
+#100
+0"
+b10 #
+b10 &

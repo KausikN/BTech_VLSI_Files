@@ -1,0 +1,53 @@
+$date
+	Fri Aug 16 00:52:14 2019
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1s
+$end
+$scope module top $end
+$var wire 16 ! sum [16:1] $end
+$var wire 1 " carry $end
+$var reg 16 # a [16:1] $end
+$var reg 16 $ b [16:1] $end
+$var reg 1 % cin $end
+$scope module rd4 $end
+$var wire 16 & a [16:1] $end
+$var wire 16 ' b [16:1] $end
+$var wire 1 % cin $end
+$var wire 16 ( sum [16:1] $end
+$var wire 16 ) gk [16:1] $end
+$var wire 1 " carry $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b1110100011101010 )
+b1001011110010101 (
+b1110111010101010 '
+b1010100011101010 &
+1%
+b1110111010101010 $
+b1010100011101010 #
+1"
+b1001011110010101 !
+$end
+#10
+b1111111111100010 )
+b1000110000011101 !
+b1000110000011101 (
+b1101110101111010 $
+b1101110101111010 '
+b1010111010100010 #
+b1010111010100010 &
+#20
+b1110111100000000 )
+b1001001011111011 !
+b1001001011111011 (
+b1010011101010000 $
+b1010011101010000 '
+b1110101110101010 #
+b1110101110101010 &
