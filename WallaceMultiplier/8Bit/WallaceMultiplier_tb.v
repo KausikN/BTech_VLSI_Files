@@ -11,8 +11,8 @@ module tb;
 
     initial begin
 
-        A = 8'b11111111;
-        B = 8'b00100101;
+        A = 8'b01110111;
+        B = 8'b10100101;
         #10;
     end
 

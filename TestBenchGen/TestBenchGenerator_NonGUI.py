@@ -134,11 +134,16 @@ def InputOutputVerilogParser(filepath, destfolder):
 
 	contents = FileContents(filepath)
 	contents = contents.split("\n")
-	# print ("Contents: ", contents)
+	# contents = contents.split(";")
+	# iterindex = 0
+	# for i in contents:
+	# 	contents[iterindex] = i + ";"
+	# 	iterindex+=1
+	print("\n\nCONTENTS: ", contents, "\n\n")
 	for line in contents:
 		print ("Line(wos): ", line)
 		line = line.strip()	
-		print ("Line(ws): ", line)				# C:\LinuxTerminalDocuments\COE17B010\VLSI\PracticeCourse\FlipFlops\Counter\Sync\Combined\UpDownSync.v
+		print ("Line(ws): ", line)
 
 		if re.search('module\s+', line):
 			modulename = re.findall('module\s+(.*)\(', line)[0].strip()
@@ -287,15 +292,17 @@ def AssignFormatValues():
 		if f[0] == '^vtb_monitor^':
 			s = '$monitor($time, ": '
 			for i in inputs:
-				s = s + ', ' + i + ': %b'
+				s = s + ', ' + i + ': %b(%d)'		# 2 prints of inp and output needed
 			for i in outputs:
-				s = s + ', ' + i + ': %b'
+				s = s + ', ' + i + ': %b(%d)'
 
 			s = s + '"'
 
 			for i in inputs:
+				s = s + ', ' + i 					# As there is %b and %d
 				s = s + ', ' + i
 			for i in outputs:
+				s = s + ', ' + i
 				s = s + ', ' + i
 			s = s + ');'
 
@@ -382,7 +389,12 @@ def AllTestCases(timedelay, inputs, inputs_sizes):
 
 	totinp = [0]*total_size
 
+	print("\n")
+
 	for i in range(noofcombinations):
+
+		print("TestCase: ", i, "/", noofcombinations)
+
 		s = s + '#' + str(timedelay) + ' '
 		totinp = GenNextInput(totinp)
 
