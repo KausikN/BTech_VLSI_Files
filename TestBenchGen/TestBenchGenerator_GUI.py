@@ -136,7 +136,6 @@ def RemoveVectorArray(name):
 		name = re.findall('^(.+)(\[.*:.*\])', name)[0]
 		return name.strip()
 	return name.strip()
-
 #--4--
 def InputOutputVerilogParser(filepath, destfolder):
 	global inputs
@@ -148,21 +147,34 @@ def InputOutputVerilogParser(filepath, destfolder):
 	global modulename
 
 	contents = FileContents(filepath)
-	contents = contents.split("\n")
-	# print ("Contents: ", contents)
+	# contents = contents.split("\n")
+	contents = contents.split(";")
+	iterindex = 0
+	for i in contents:
+		contents[iterindex] = i + ";"
+		iterindex+=1
+	print("\n\nCONTENTS: ", contents, "\n\n")
 	for line in contents:
 		print ("Line(wos): ", line)
 		line = line.strip()	
-		print ("Line(ws): ", line)				# C:\LinuxTerminalDocuments\COE17B010\VLSI\PracticeCourse\FlipFlops\Counter\Sync\Combined\UpDownSync.v
+		print ("Line(ws): ", line)
+
+		line = line.split('\n')
+		line = ' '.join(line)
+		# print(line)
 
 		if re.search('module\s+', line):
 			modulename = re.findall('module\s+(.*)\(', line)[0].strip()
 
 		if re.search('input\s+', line):
+			print("\nRE: ", re.findall('input\s+(.*);', line), "\n")
 			val = re.findall('input\s+(.*);', line)[0].strip()
 			if re.search('^\[', val) == None:
 				print ("Input: ", val, " -- ", val.split(","))
 				inps = val.split(",")
+				for index in range(len(inps)):
+					inps[index] = inps[index].strip()
+
 				inpssize = []
 				i=0
 				for o in inps:
@@ -180,6 +192,9 @@ def InputOutputVerilogParser(filepath, destfolder):
 
 				print ("Input: ", val, " -- ", val.split(","))
 				inps = val.split(",")
+				for index in range(len(inps)):
+					inps[index] = inps[index].strip()
+
 				inpssize = []
 				i=0
 				for o in inps:
@@ -199,6 +214,9 @@ def InputOutputVerilogParser(filepath, destfolder):
 			if re.search('^\[', val) == None:
 				print ("Output: ", val, " -- ", val.split(","))
 				outs = val.split(",")
+				for index in range(len(outs)):
+					outs[index] = outs[index].strip()
+
 				outssize = []
 				i=0
 				for o in outs:
@@ -217,6 +235,9 @@ def InputOutputVerilogParser(filepath, destfolder):
 
 				print ("Output: ", val, " -- ", val.split(","))
 				outs = val.split(",")
+				for index in range(len(outs)):
+					outs[index] = outs[index].strip()
+				
 				outssize = []
 				i=0
 				for o in outs:
@@ -302,15 +323,17 @@ def AssignFormatValues():
 		if f[0] == '^vtb_monitor^':
 			s = '$monitor($time, ": '
 			for i in inputs:
-				s = s + ', ' + i + ': %b'
+				s = s + ', ' + i + ': %b(%d)'		# 2 prints of inp and output needed
 			for i in outputs:
-				s = s + ', ' + i + ': %b'
+				s = s + ', ' + i + ': %b(%d)'
 
 			s = s + '"'
 
 			for i in inputs:
+				s = s + ', ' + i 					# As there is %b and %d
 				s = s + ', ' + i
 			for i in outputs:
+				s = s + ', ' + i
 				s = s + ', ' + i
 			s = s + ');'
 
@@ -397,7 +420,12 @@ def AllTestCases(timedelay, inputs, inputs_sizes):
 
 	totinp = [0]*total_size
 
+	print("\n")
+
 	for i in range(noofcombinations):
+
+		print("TestCase: ", i, "/", noofcombinations)
+
 		s = s + '#' + str(timedelay) + ' '
 		totinp = GenNextInput(totinp)
 
