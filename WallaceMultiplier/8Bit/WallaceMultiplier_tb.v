@@ -5,14 +5,14 @@ module tb;
     reg [8:1] A;
     reg [8:1] B;
 
-    wire [18:1] products;
+    wire [16:1] products;
 
     WallaceMultiplier wm (A, B, products);
 
     initial begin
 
-        A = 8'b01110111;
-        B = 8'b10100101;
+        A = 8'b11111111;
+        B = 8'b11111111;
         #10;
     end
 
