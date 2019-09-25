@@ -1,6 +1,6 @@
 `include "WallaceMultiplier_8Bit.v"
 `include "8BitAdder.v"
-`include "DFF2.v"
+//`include "DFF2.v"
 
 module Multiplier_16Bit(A, B, out);
     
