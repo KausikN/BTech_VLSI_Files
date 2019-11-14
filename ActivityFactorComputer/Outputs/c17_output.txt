@@ -1,0 +1,18 @@
+C:\GitHub Codes and Projects\VLSI Files\VLSI_Files\ActivityFactorComputer>py -3 "ActivityFactor_NonGUI_';'Delimited.py"
+Verilog Code Location (with filename and filepath): C:\GitHub Codes and Projects\VLSI Files\VLSI_Files\ActivityFactorComputer\TestCodes\c17.v
+{'Verilog Code Location (with filename and filepath)': 'C:\\GitHub Codes and Projects\\VLSI Files\\VLSI_Files\\ActivityFactorComputer\\TestCodes\\c17.v'}
+Wire  0 :  N1  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  1 :  N2  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  2 :  N3  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  3 :  N6  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  4 :  N7  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  5 :  N22  -  o  - actFactor_Prob:  0.53125  - Activity Factor:  0.2490234375
+Wire  6 :  N23  -  o  - actFactor_Prob:  0.609375  - Activity Factor:  0.238037109375
+Wire  7 :  N10  -  w  - actFactor_Prob:  0.75  - Activity Factor:  0.1875
+Wire  8 :  N11  -  w  - actFactor_Prob:  0.75  - Activity Factor:  0.1875
+Wire  9 :  N16  -  w  - actFactor_Prob:  0.625  - Activity Factor:  0.234375
+Wire  10 :  N19  -  w  - actFactor_Prob:  0.625  - Activity Factor:  0.234375
+--------------Output Activity Factor_Probs----------------
+Output Name:  N22  - Prob:  0.53125  - Activity Factor:  0.2490234375
+Output Name:  N23  - Prob:  0.609375  - Activity Factor:  0.238037109375
+-----------------------------------------------------

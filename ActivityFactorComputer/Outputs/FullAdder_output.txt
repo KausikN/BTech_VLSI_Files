@@ -1,0 +1,17 @@
+C:\GitHub Codes and Projects\VLSI Files\VLSI_Files\ActivityFactorComputer>py -3 "ActivityFactor_NonGUI_';'Delimited.py"
+Verilog Code Location (with filename and filepath): C:\GitHub Codes and Projects\VLSI Files\VLSI_Files\ActivityFactorComputer\TestCodes\FullAdder.v
+{'Verilog Code Location (with filename and filepath)': 'C:\\GitHub Codes and Projects\\VLSI Files\\VLSI_Files\\ActivityFactorComputer\\TestCodes\\FullAdder.v'}
+Wire  0 :  A  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  1 :  B  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  2 :  C  -  i  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  3 :  sum  -  o  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  4 :  carry  -  o  - actFactor_Prob:  0.4375  - Activity Factor:  0.24609375
+Wire  5 :  w1  -  w  - actFactor_Prob:  0.5  - Activity Factor:  0.25
+Wire  6 :  w2  -  w  - actFactor_Prob:  0.75  - Activity Factor:  0.1875
+Wire  7 :  w3  -  w  - actFactor_Prob:  0.25  - Activity Factor:  0.1875
+Wire  8 :  w4  -  w  - actFactor_Prob:  0.5625  - Activity Factor:  0.24609375
+Wire  9 :  w5  -  w  - actFactor_Prob:  0.25  - Activity Factor:  0.1875
+--------------Output Activity Factor_Probs----------------
+Output Name:  sum  - Prob:  0.5  - Activity Factor:  0.25
+Output Name:  carry  - Prob:  0.4375  - Activity Factor:  0.24609375
+-----------------------------------------------------
