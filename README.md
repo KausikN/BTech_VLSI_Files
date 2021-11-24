@@ -14,6 +14,7 @@
 
 ## Codes
 
+ - [Genus Reports](Assignments/GenusReports/)
  - [Test Bench Generator](Projects/TestBenchGen/)
  - [Activity Factor Computer](Projects/ActivityFactorComputer/)
  - Adders
